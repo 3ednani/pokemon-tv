@@ -1,0 +1,122 @@
+:root { 
+    --red: #ff0000; 
+    --bg: #000; 
+    --card: #1a1a1a; 
+}
+
+body { 
+    background: var(--bg); 
+    color: #fff; 
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+    margin: 0; 
+    -webkit-tap-highlight-color: transparent; 
+}
+
+header { 
+    padding: 40px 20px; 
+    text-align: center; 
+    border-bottom: 1px solid #333; 
+}
+
+.red { color: var(--red); }
+
+.arc-title { 
+    padding: 25px 20px 10px; 
+    font-size: 1.1rem; 
+    color: #888; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px; 
+    padding: 15px; 
+}
+
+.card { 
+    background: var(--card); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 1px solid #222; 
+}
+
+.card-img { 
+    width: 100%; 
+    aspect-ratio: 16/9; 
+    background-size: cover; 
+    background-position: center; 
+    background-color: #333; 
+}
+
+.card h3 { font-size: 14px; margin: 10px 10px 2px; }
+.card p { font-size: 12px; color: #666; margin: 0 10px 10px; }
+
+/* PLAYER OVERLAY STYLES */
+#player-overlay { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    background: #000; 
+    z-index: 9999; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* THE FIX: This hides the overlay completely when it has the .hidden class */
+.hidden { 
+    display: none !important; 
+    visibility: hidden !important;
+}
+
+.player-header { 
+    display: flex; 
+    align-items: center; 
+    padding: 15px; 
+    background: #111; 
+    border-bottom: 1px solid #222; 
+}
+
+.back-btn { 
+    background: var(--red); 
+    border: none; 
+    color: #fff; 
+    padding: 8px 16px; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    margin-right: 15px; 
+}
+
+.video-wrapper { 
+    width: 100%; 
+    aspect-ratio: 16/9; 
+    background: #000; 
+}
+
+iframe { width: 100%; height: 100%; border: none; }
+
+#episode-list { 
+    flex: 1; 
+    overflow-y: auto; 
+    padding: 10px; 
+    background: #0a0a0a; 
+}
+
+.ep-row { 
+    width: 100%; 
+    background: #1a1a1a; 
+    border: none; 
+    color: #fff; 
+    padding: 18px; 
+    margin-bottom: 6px; 
+    display: flex; 
+    justify-content: space-between; 
+    border-radius: 8px; 
+    font-size: 15px; 
+}
+
+.ep-row.watched { opacity: 0.3; }
+.play-icon { color: var(--red); }
